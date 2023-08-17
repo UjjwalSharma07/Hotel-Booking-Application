@@ -12,10 +12,17 @@
   
   .rContainer {
     background-color: white;
+    
     padding: 20px;
     position: relative;
+    width: 500px;
+    height: 600px;
+    overflow-y: scroll;
+    
   }
-  
+  .rContainer::-webkit-scrollbar {
+    display: none;
+  }
   .rClose {
     position: absolute;
     top: 0;
@@ -42,6 +49,7 @@
   
   .rDesc {
     font-weight: 300;
+    
   }
   
   .rMax {

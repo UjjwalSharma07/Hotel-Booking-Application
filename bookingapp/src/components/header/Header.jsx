@@ -13,7 +13,7 @@ import { AuthContext } from '../../context/AuthContext';
 
 const Header = ({type}) => {
     const [openDate,setOpenDate] = useState(false);
-    const [Destination,setDestination]=useState("");
+    const [destination,setDestination]=useState("");
     const [dates, setDates] = useState([
         {
           startDate: new Date(),
@@ -38,8 +38,8 @@ const Header = ({type}) => {
       };
       const navigate = useNavigate();
       const handleSearch= () =>{
-          dispatch({type:"NEW_SEARCH",payload:{Destination,dates,options}})
-          navigate("/hotels",{state:{Destination,dates,options}});
+          dispatch({type:"NEW_SEARCH",payload:{destination,dates,options}})
+          navigate("/hotels",{state:{destination,dates,options}});
           setopenOptions(false);
       };
       const {dispatch} = useContext(SearchContext);

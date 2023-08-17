@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
         ) : (
           <div className={style.navItems}>
-            <button className={style.navbtn}>Register</button>
+            <button className={style.navbtn} onClick={()=>{navigate("/register")}} >Register</button>
             <button className={style.navbtn} onClick={()=>{navigate("/login")}}>Login</button>
           </div>
         )}

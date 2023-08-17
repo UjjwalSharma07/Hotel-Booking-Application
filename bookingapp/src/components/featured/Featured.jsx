@@ -1,9 +1,10 @@
 import useFetch from "../../hooks/useFetch";
 import style from "./featured.module.css";
+import flag from './flag.png'
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "hotels/coutByCity?cities=Agra,Goa,Delhi,Meerut"
+    "hotels/coutByCity?cities=New Delhi,Goa,Delhi,Meerut"
   );
   console.log(data);
   return (
@@ -14,38 +15,62 @@ const Featured = () => {
         <>
           <div className={style.featuredItem}>
             <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/957801.webp?k=a969e39bcd40cdcc21786ba92826063e3cb09bf307bcfeac2aa392b838e9b7a5&o="
+              src="https://cf.bstatic.com/xdata/images/city/600x600/684765.jpg?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o="
               alt=""
               className={style.featuredImg}
             />
             <div className={style.featuredTitles}>
-              <h1>Dublin</h1>
-              <h2>{data[0]} properties</h2>
-            </div>
-          </div>
 
+              <div className={style.firstdiv}>
+                <h1>New Delhi</h1>
+                <img className={style.flag} src={flag} alt="" />
+              </div>
+
+              {/* <div className={style.seconddiv}>
+                <h2>{data[0]}  properties</h2>
+              </div> */}
+
+            </div>
+          </div>
           <div className={style.featuredItem}>
-            <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/690334.webp?k=b99df435f06a15a1568ddd5f55d239507c0156985577681ab91274f917af6dbb&o="
+          <img
+              src="https://cf.bstatic.com/xdata/images/city/600x600/971346.jpg?k=40eeb583a755f2835f4dcb6900cdeba2a46dc9d50e64f2aa04206f5f6fce5671&o="
               alt=""
               className={style.featuredImg}
             />
             <div className={style.featuredTitles}>
-              <h1>Reno</h1>
-              <h2>{data[1]}  properties</h2>
+
+              <div className={style.firstdiv}>
+                <h1>Mumbai</h1>
+                <img className={style.flag} src={flag} alt="" />
+              </div>
+
+              {/* <div className={style.seconddiv}>
+                <h2>{data[0]}  properties</h2>
+              </div> */}
+
             </div>
           </div>
           <div className={style.featuredItem}>
-            <img
-              src="https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o="
+          <img
+              src="https://cf.bstatic.com/xdata/images/city/600x600/684534.jpg?k=d1fe86c22f2433f4e2dda14ddcbe80feb024b0fb30305e5684a1241fba5d4cff&o="
               alt=""
               className={style.featuredImg}
             />
             <div className={style.featuredTitles}>
-              <h1>Austin</h1>
-              <h2>{data[2]}  properties</h2>
+
+              <div className={style.firstdiv}>
+                <h1>Bangalore</h1>
+                <img className={style.flag} src={flag} alt="" />
+              </div>
+
+              {/* <div className={style.seconddiv}>
+                <h2>{data[0]}  properties</h2>
+              </div> */}
+
             </div>
           </div>
+        
         </>
       )}
     </div>

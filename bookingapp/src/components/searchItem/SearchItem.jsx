@@ -15,7 +15,7 @@ const SearchItem = ({item}) => {
         <span className={style.siTaxiOp}>Free airport taxi</span>
         <span className={style.siSubTitle}>Studio Apartment with Air conditioning</span>
         <span className={style.siFeatures}>
-           {item.desc}
+          {item.desc.length > 50 ? `${item.desc.substring(0, 50)}...` : item.desc}
         </span>
         <span className={style.siCancelOp}>Free cancellation</span>
         <span className={style.siCancelOpSubTitle}>

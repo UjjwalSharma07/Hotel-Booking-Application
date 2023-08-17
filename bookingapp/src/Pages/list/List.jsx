@@ -10,7 +10,7 @@ import useFetch from '../../hooks/useFetch'
 
 const List = () => {
   const location = useLocation();
-  const [Destination,setDestination] = useState(location.state.Destination);
+  const [destination,setDestination] = useState(location.state.destination);
   const [dates,setDates] = useState(location.state.dates);
   const [options,setOptions] = useState(location.state.options);
   const [openDate,setOpenDate] = useState(false);
@@ -18,7 +18,7 @@ const List = () => {
   const [max,setMax] = useState(undefined);
 
   const {data, loading,error,reFetch} = useFetch(
-    `/hotels?city=${Destination}&min=${min || 0}&max=${max || 999}`
+    `/hotels?city=${destination}`
     );
   
   const handleClick = () =>{
@@ -34,7 +34,7 @@ const List = () => {
               <h1 className={style.ListTitle}>Search</h1>
               <div className={style.lstItems}>
                 <label >Destination</label>
-                <input onChange={e=>(setDestination(e.target.value))} placeholder={Destination} type="text" />
+                <input onChange={e=>setDestination(e.target.value)} placeholder={destination} type="text" />
               </div>
               <div className={style.lstItems}>
                 <label >Check-in-Date</label>
