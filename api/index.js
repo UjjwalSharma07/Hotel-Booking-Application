@@ -12,7 +12,7 @@ require('dotenv').config();
 
 //middlewares
 app.use(cors({
-    origin:"*",
+    origin:"https://bookingappli.netlify.app/",
 }));
 app.use(cookieParser());
 app.use(express.json());
