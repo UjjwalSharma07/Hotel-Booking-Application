@@ -30,7 +30,7 @@ const SearchItem = ({item}) => {
         <div className={style.siDetailTexts}>
             <span className={style.siPrice}>₹ {item.cheapestPrice}</span>
             <span className={style.sitaxiOp}>Include taxes and fees</span>
-            <Link to={`/hotels/${item._id}`}>
+            <Link to={`https://hotel-booking-application-zqsq.onrender.com/api/v1/hotels/${item._id}`}>
               <button className={style.siCheckBtn} >See availability</button>
             </Link>
         </div>

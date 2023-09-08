@@ -29,7 +29,7 @@ const Register = () => {
     e.preventDefault();
     
     try {
-      await axios.post("/auth/register", credentials);
+      await axios.post("https://hotel-booking-application-zqsq.onrender.com/api/v1/auth/register", credentials);
       navigate("/login")
     } catch (err) {
       console.log(err);

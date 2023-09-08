@@ -18,7 +18,7 @@ const List = () => {
   const [max,setMax] = useState(undefined);
 
   const {data, loading,error,reFetch} = useFetch(
-    `/hotels?city=${destination}`
+    `https://hotel-booking-application-zqsq.onrender.com/api/v1/hotels?city=${destination}`
     );
   
   const handleClick = () =>{

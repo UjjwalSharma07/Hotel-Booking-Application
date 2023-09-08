@@ -4,7 +4,7 @@ import flag from './flag.png'
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "hotels/coutByCity?cities=New Delhi,Goa,Delhi,Meerut"
+    "https://hotel-booking-application-zqsq.onrender.com/api/v1/hotels/coutByCity?cities=New Delhi,Goa,Delhi,Meerut"
   );
   console.log(data);
   return (
